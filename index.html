@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pure JS Carousel</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    body * {
+      margin: 20px auto;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <br>
+
+  <h2>Pure JS Carousel Demo</h2>
+
+  <div id="carousel">
+    <img class="carousel-img" src="images/carousel1.jpg" alt="carousel1">
+    <img class="carousel-img" src="images/carousel2.jpg" alt="carousel2">
+    <img class="carousel-img" src="images/carousel3.jpg" alt="carousel3">
+  </div>
+
+
+  <button onclick="carousel.slide(0)">Slide1</button>
+  <button onclick="carousel.slide(1)">Slide2</button>
+  <button onclick="carousel.slide(2)">Slide3</button>
+
+  <script src="carousel_2.0.1.js"></script>
+  <script>
+    var carousel = new Carousel(carousel, 2000);
+  </script>
+</body>
+</html>
