@@ -5,10 +5,10 @@
 @guide
   1. Add or link this script to the bottom of your body tag, or after the DOM has 
      completely loaded.
-  2. After this script, create a new object with the name of your choosing.
-  :: var carousel = new Carousel();
+  2. After this script, create a new object with the name of your choice.
+  :: var myCarousel = new Carousel();
   3. Add ID of wrapper element as the first argument, and interval (millisecond) as the second argument.
-  :: var carousel = new Carousel("wrapperID", 2000);
+  :: var myCarousel = new Carousel("wrapperID", 2000);
 
 @last modified  06-26-2016
 */
@@ -24,6 +24,7 @@ function Carousel(containerID, interval) {
   this.interval = interval;
   this.slide(this.current); // Start on slide 1
 }
+
 
 // Run Carousel
 Carousel.prototype.auto = function() {
@@ -42,7 +43,7 @@ Carousel.prototype.auto = function() {
   }
 };
 
-// Stop Running
+// Stop Auto
 Carousel.prototype.stop = function() {
   clearTimeout(this.run);
 };
